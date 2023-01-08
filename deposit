@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class depositCalculator {
+    public static void main( String[] args ) {
+        Scanner scanner = new Scanner ( System.in );
+        double deposit  = Double.parseDouble ( scanner.nextLine () );
+        int mounts = Integer.parseInt ( scanner.nextLine () );
+        double percentPerYear = Double.parseDouble ( scanner.nextLine () );
+        double amountPerMount = (deposit*(percentPerYear/100))/12;
+        double totalSum  = deposit + amountPerMount * mounts;
+
+        System.out.println (totalSum);
+
+    }
+}
